@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  wvapp
 //
-//  Created by Wesley Peter on 11/8/18.
+//  Created by Wes Peter on 11/8/18.
 //  Copyright © 2018 Wes Peter. All rights reserved.
 //
 
