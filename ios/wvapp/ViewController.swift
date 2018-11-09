@@ -24,6 +24,11 @@ class ViewController: UIViewController {
         webView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         webView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
+        // NOTE: non-public API
+        // Needed for client-side non-hash routing to work... I think.  I couldn't get it to work
+        // without the following line, would love to be wrong :)
+        webView.configuration.preferences.setValue(true, forKey: "allowFileAccessFromFileURLs")
+        
         let url = Bundle.main.url(forResource: "index", withExtension: "html", subdirectory: "webapp")!
         webView.loadFileURL(url, allowingReadAccessTo: url)
         webView.load(URLRequest(url: url))
